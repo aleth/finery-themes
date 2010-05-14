@@ -112,7 +112,7 @@ style "default"
         arrowstyle          = 1     # 0 = normal arrows, 1 = filled arrows
         #border_colors      = { "#ffffff", "#ffffff" } # colors used on borders of many widgets
         border_shades       = { 1.2, 1.0 } # gradient to draw on border
-        comboboxstyle       = 1     # 0 = normal combobox, 1 = colorized combobox below arrow
+        comboboxstyle       = 0     # 0 = normal combobox, 1 = colorized combobox below arrow
         colorize_scrollbar  = FALSE  # FALSE = disabled, TRUE = enabled
         contrast            = 0.4   # 0.8 for less contrast, more than 1.0 for more contrast on borders
         focus_color         = @colored_color
