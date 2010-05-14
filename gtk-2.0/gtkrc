@@ -7,7 +7,7 @@
 #
 # Feel free to modify and share!
 
-gtk_color_scheme = "fg_color:#404040\nbg_color:#F7F5F0\nbase_color:#ffffff\ntext_color:#323232\nselected_bg_color:#d6d4ca\nselected_fg_color:#323232\ntooltip_bg_color:#120d04\ntooltip_fg_color:#fff5fc\nlink_color:#DD4814\ncolored_color:#ff8442"
+gtk_color_scheme = "fg_color:#404040\nbg_color:#f7f5f0\nbase_color:#ffffff\ntext_color:#323232\nselected_bg_color:#d6d4ca\nselected_fg_color:#323232\ntooltip_bg_color:#120d04\ntooltip_fg_color:#fff5fc\nlink_color:#dd4a14\ncolored_color:#ff8442\ntheme_color:#f2ede4"
 
 gtk-icon-sizes = "panel-menu=26,26:gtk-button=16,16"
 
@@ -36,7 +36,7 @@ style "default"
 
     GtkCheckButton::indicator-size = 14
 
-    GtkPaned::handle-size = 6
+    GtkPaned::handle-size = 5
 
     GtkRange::trough-border = 0
     GtkRange::slider-width = 16
@@ -51,7 +51,7 @@ style "default"
     GtkMenuBar::internal-padding = 0
     GtkExpander::expander-size = 15
     GtkToolbar::internal-padding = 5
-    GtkTreeView::expander-size = 15
+    GtkTreeView::expander-size = 12
     GtkTreeView::indent-expanders = 1
     GtkTreeView::vertical-separator = 0
     #GtkProgressBar ::min-vertical-bar-width = 14
@@ -115,7 +115,7 @@ style "default"
         comboboxstyle       = 1     # 0 = normal combobox, 1 = colorized combobox below arrow
         colorize_scrollbar  = FALSE  # FALSE = disabled, TRUE = enabled
         contrast            = 0.4   # 0.8 for less contrast, more than 1.0 for more contrast on borders
-        focus_color         = @colored_color#"#FE765E"
+        focus_color         = @colored_color
         glazestyle          = 4     # 0 = flat, 1 = curved, 2 = concave, 3 = top-curved, 4 = beryl
         glow_shade          = 1.1   # sets glow amount for buttons or widgets
         glowstyle           = 0     # 0 = top, 1 = bottom, 2 = top and bottom, 3 = center (vertical), 4 = center (horizontal) 
@@ -191,11 +191,11 @@ style "button" = "selected"
     xthickness = 3
     ythickness = 3
 
-    bg[NORMAL]      = shade (0.8, "#f2ede4")#@selected_bg_color)
-    bg[PRELIGHT]    = shade (0.84, "#f2ede4")#@selected_bg_color)
-    bg[SELECTED]    = shade (0.97, "#f2ede4")#@selected_bg_color)
-    bg[ACTIVE]      = shade (0.74, "#f2ede4")#@selected_bg_color)
-    bg[INSENSITIVE] = mix (0.3, @selected_bg_color, "#f2ede4") 
+    bg[NORMAL]      = shade (0.8, @theme_color)
+    bg[PRELIGHT]    = shade (0.84, @theme_color)
+    bg[SELECTED]    = shade (0.97, @theme_color)
+    bg[ACTIVE]      = shade (0.74, @theme_color)
+    bg[INSENSITIVE] = mix (0.3, @selected_bg_color, @theme_color) 
 
     engine "murrine"
     {
@@ -277,20 +277,16 @@ style "menu-item" = "default"
     xthickness = 0
     ythickness = 4
 
-    bg[SELECTED] = shade (0.92, "#f2ede4")
-        engine "murrine" 
-        {
-            glowstyle   = 3
-            glow_shade  = 1.1
-            roundness   = 1
-               
-            border_shades       = { 1.35, 1.25 } # gradient to draw on borderll sides
-            contrast            = 0.4
-            shadow_shades       = { 0.4, 0.2 } # draw gradient on shadow of some widgets
-            lightborderstyle    = 1     # 0 = lightborder on top side, 1 = lightborder on all sides
-            lightborder_shade   = 1.8
-            menuitemstyle       = 1     # 0 = flat, 1 = glassy, 2 = striped
-        }
+    bg[SELECTED] = shade (0.92, @theme_color)
+    
+    engine "murrine" 
+    {
+        roundness   = 0
+        contrast            = 0.55
+        
+        border_shades       = { 1.25, 1.05 }
+        gradient_shades     = {1.2, 1.0, 1.2, 1.0}
+    }
 
 
 }
@@ -307,20 +303,15 @@ style "separator-menu-item"
 
 style "treeview"
 {
-    bg[SELECTED] = shade (0.92, "#f2ede4")
+    base[ACTIVE] = shade (0.95, @theme_color)
+    base[SELECTED] = shade (0.92, @theme_color)
     
     engine "murrine" 
     {
-        glowstyle   = 3
-        glow_shade  = 1.4
-        roundness   = 1
-           
-        border_shades       = { 1.35, 1.25 } # gradient to draw on borderll sides
-        contrast            = 0.4
-        shadow_shades       = { 0.4, 0.2 } # draw gradient on shadow of some widgets
-        lightborderstyle    = 1     # 0 = lightborder on top side, 1 = lightborder on all sides
-        lightborder_shade   = 1.8
-        menuitemstyle       = 1     # 0 = flat, 1 = glassy, 2 = striped
+        roundness   = 0
+        
+        border_shades       = { 1.25, 1.05 }
+        gradient_shades     = {1.15, 0.95, 1.15, 0.95}
     }
 }
 
@@ -352,8 +343,9 @@ style "progressbar"
     
     engine "murrine"
     {
-        border_shades       = { .8, .8} # draw a gradient on the border.
+        border_shades       = { .8, .7} # draw a gradient on the border.
         border_colors       = { "#FE765E", "#FE765E" }
+        
         glazestyle          = 0     # 0 = flat, 1 = curved, 2 = concave, 3 = top-curved, 4 = beryl
         glow_shade          = 1.5   # sets glow amount for buttons or widgets
         glowstyle           = 2     # 0 = top, 1 = bottom, 2 = top and bottom, 3 = center (vertical), 4 = center (horizontal) 
@@ -365,8 +357,7 @@ style "progressbar"
     bg[NORMAL]      = shade (1.08, @bg_color)
     bg[PRELIGHT]    = shade (1.22, @bg_color)
     bg[SELECTED]    = @colored_color
-
-    fg[PRELIGHT]    = "#fff"
+    fg[SELECTED]    = "#000"
 }
 
 style "statusbar" 
@@ -639,3 +630,23 @@ style "evo-new-button-workaround"
 widget_class "EShellWindow.GtkVBox.BonoboDock.BonoboDockBand.BonoboDockItem*" style "evo-new-button-workaround"
 
 class "TerminalScreen" style "terminal"
+
+# Removing the ugly thin dark border from nautilus' sidepane
+style "nautilus-sidepane"
+{
+    xthickness = 0
+	ythickness = 0
+}
+widget "*Nautilus*Places*Sidebar*"        style "nautilus-sidepane"
+widget_class "*Nautilus*SidePane.*"          style "nautilus-sidepane"
+widget_class "*NautilusSidePane.*"              style "nautilus-sidepane"
+widget_class "*Nautilus*SidePane*.GtkWidget"        style "nautilus-sidepane"
+
+
+# Removing the light padding of the thin dark border around nautilus view
+style "nautilus-view"
+{
+	xthickness = 1
+	ythickness = 1
+}
+widget "*Nautilus*View*"                  style "nautilus-view"
