@@ -323,7 +323,7 @@
 
 
 <draw_ops name="close_unfocused_normal">
-    <image filename="close_unfocused1.png" x="0" y="2" width="object_width" height="object_height" alpha=".8"/>
+    <image filename="close_unfocused.png" x="0" y="2" width="object_width" height="object_height" alpha=".8"/>
 </draw_ops>
 <draw_ops name="close_unfocused_prelight">
     <image filename="close_unfocused_over.png" x="0" y="2" width="object_width" height="object_height" alpha=".8"/>
