@@ -6,50 +6,75 @@
 
 style "theme-panel"
 {
+    xthickness = 3
 	#bg_pixmap[NORMAL]	= "/Panels/bg_panel_26.png" # Disable for normal panel backgrounds.
 
-	bg[SELECTED]	= shade(1.2, @selected_bg_color) #shade (0.85, @selected_bg_color) # Makes selected items dark.
-	bg[NORMAL]	= "#D4CEBF" # Makes panel background dark.
-	bg[PRELIGHT]	= shade (1.2, @selected_bg_color) # Makes panel button prelight dark.
-	bg[ACTIVE]	=  shade (0.9, @selected_bg_color) #"#DFDBCE"  #shade (0.60, @bg_color) # Makes active buttons dark.
-	bg[INSENSITIVE]	= "#464139"
-	fg[NORMAL]	= "#2B2A28" # Makes panel text light.
-	fg[PRELIGHT]	= "#48453E" #@selected_fg_color  # Makes prelighted text colored.
-	fg[SELECTED]	= "#333333" #@selected_fg_color  # Makes prelighted text colored.
-	fg[ACTIVE]	= @selected_fg_color  # Makes active text colored.
-	fg[INSENSITIVE]	= "#666666" # Color for insensitive text.
-	text[NORMAL]	= "#E6E6E6"
-	text[PRELIGHT]	= "#333333" #z@selected_fg_color  # Makes prelighted text colored.
-	text[SELECTED]	= "#333333" #@selected_fg_color  # Makes prelighted text colored.
-	text[ACTIVE]	= @selected_fg_color  # Makes active text colored.
+	bg[SELECTED]	    = shade(1.04, @bg_color) # Makes selected items dark.
+	bg[NORMAL]	        = "#D4CEBF" # Makes panel background dark.
+	bg[PRELIGHT]	    = shade (1.2, @selected_bg_color) # Makes panel button prelight dark.
+	bg[ACTIVE]	        =  shade (0.7, @bg_color) # Makes active buttons dark.
+	bg[INSENSITIVE]	    = "#464139"
+	
+	fg[NORMAL]	        = "#2B2A28" # Makes panel text light.
+	fg[PRELIGHT]	    = "#48453E" # Makes prelighted text colored.
+	fg[SELECTED]	    = "#333333" # Makes prelighted text colored.
+	fg[ACTIVE]	        = @selected_fg_color  # Makes active text colored.
+	fg[INSENSITIVE]	    = "#666666" # Color for insensitive text.
+	
+	text[NORMAL]	    = "#E6E6E6"
+	text[PRELIGHT]	    = "#333333" # Makes prelighted text colored.
+	text[SELECTED]	    = "#333333" # Makes prelighted text colored.
+	text[ACTIVE]	    = @selected_fg_color # Makes active text colored.
 	text[INSENSITIVE]	= "#48453E"
 
 	engine "murrine" {
-		roundness = 1 # This sets the roundness of panel items.
+		border_shades       = { 1.08, 1.03 } # gradient to draw on border
 		
-		border_shades       = { 1.0, 1.1 } # gradient to draw on border
 		contrast            = 0.7   # 0.8 for less contrast, more than 1.0 for more contrast on borders
+		
 		glazestyle          = 3     # 0 = flat, 1 = curved, 2 = concave, 3 = top-curved, 4 = beryl
 		glow_shade          = 1.4   # sets glow amount for buttons or widgets
-		glowstyle           = 4     # 0 = top, 1 = bottom, 2 = top and bottom, 3 = center (vertical), 4 = center (horizontal)
-		gradient_shades     = {1.2,1.0,1.0,0.9} # default: {1.1,1.0,1.0,1.1}
+		glowstyle           = 4     # 0 = top, 1 = bottom, 2 = top and bottom, 3 = vcenter, 4 = hcenter
+		gradient_shades     = {1.22, 1.0, 1.0, 0.9}
+		
 		highlight_shade     = 1.05  # set highlight amount for buttons or widgets
-		lightborder_shade   = 1.1   # sets lightborder amount for buttons or widgets
+		
+		lightborder_shade   = 1.6   # sets lightborder amount for buttons or widgets
 		lightborderstyle    = 1     # 0 = lightborder on top side, 1 = lightborder on all sides
 
-		shadow_shades 	    = { 0.4, 0.2 } # draw gradient on shadow of some widgets
+		roundness = 0 # This sets the roundness of panel items.
+		
+		shadow_shades 	    = { 0.3, 0.1 } # draw gradient on shadow of some widgets
+		
 		textstyle           = 1     # 0 = normal text, 1 = inset
 	}
 }
 
-style "theme-panel-light"
+# For the window list, clock applet etc.
+style "theme-panel-buttons" = "theme-panel"
 {
-	fg[NORMAL]	= @fg_color
+	bg[NORMAL]	    = "#E4DECF" # Makes panel background dark.
+	bg[SELECTED]	= shade(1.01, @bg_color) # Makes selected items dark.
+	bg[PRELIGHT]	= shade (1.18, @theme_color) # Makes panel button prelight dark.
+	bg[ACTIVE]	    =  shade (0.75, @theme_color) # Makes active buttons dark.
+	bg[INSENSITIVE]	= "#464139"
+	
+	engine "murrine" {
+		roundness           = 2 # This sets the roundness of panel items.
+		contrast            = 1.0
+		
+		border_shades       = {1.4, 1.0}
+		
+		lightborder_shade   = 2.0   # sets lightborder amount for buttons or widgets
+		lightborderstyle    = 1     # 0 = lightborder on top side, 1 = lightborder on all sides
+		
+		#gradient_shades     = {1.0, 1.0, 0.9, 0.9}
+	}
 }
 
-# Panel settings. Do not change.
+# Panel settings
 widget "*PanelWidget*"		style "theme-panel"
-widget "*PanelApplet*"		style "theme-panel"
+widget "*PanelApplet*"		style "theme-panel-buttons"
 widget "*fast-user-switch*"	style "theme-panel"
 widget "*gdm-user-switch*"	style "theme-panel"
 widget "*CPUFreq*Applet*"	style "theme-panel"

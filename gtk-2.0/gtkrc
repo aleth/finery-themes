@@ -13,8 +13,6 @@ gtk-icon-sizes = "panel-menu=26,26:gtk-button=16,16"
 
 gtk-auto-mnemonics = 1 
 
-include "panel.rc"
-
 style "default"
 {
     xthickness = 1
@@ -51,7 +49,7 @@ style "default"
     GtkMenuBar::internal-padding = 0
     GtkExpander::expander-size = 15
     GtkToolbar::internal-padding = 5
-    GtkTreeView::expander-size = 12
+    GtkTreeView::expander-size = 13
     GtkTreeView::indent-expanders = 1
     GtkTreeView::vertical-separator = 0
     #GtkProgressBar ::min-vertical-bar-width = 14
@@ -110,42 +108,55 @@ style "default"
     {
         animation           = TRUE  # FALSE = disabled, TRUE = enabled
         arrowstyle          = 1     # 0 = normal arrows, 1 = filled arrows
+        
         #border_colors      = { "#ffffff", "#ffffff" } # colors used on borders of many widgets
         border_shades       = { 1.2, 1.0 } # gradient to draw on border
+        
         comboboxstyle       = 0     # 0 = normal combobox, 1 = colorized combobox below arrow
         colorize_scrollbar  = FALSE  # FALSE = disabled, TRUE = enabled
         contrast            = 0.4   # 0.8 for less contrast, more than 1.0 for more contrast on borders
+        
         focus_color         = @colored_color
+        
         glazestyle          = 4     # 0 = flat, 1 = curved, 2 = concave, 3 = top-curved, 4 = beryl
         glow_shade          = 1.1   # sets glow amount for buttons or widgets
         glowstyle           = 0     # 0 = top, 1 = bottom, 2 = top and bottom, 3 = center (vertical), 4 = center (horizontal) 
         gradient_shades     = {1.2,1.0,1.0,0.9} # default: {1.1,1.0,1.0,1.1}
+        
         highlight_shade     = 1.0  # set highlight amount for buttons or widgets
+        
         lightborder_shade   = 1.1   # sets lightborder amount for buttons or widgets
         lightborderstyle    = 1     # 0 = lightborder on top side, 1 = lightborder on all sides
         listviewheaderstyle = 1     # 0 = flat, 1 = glassy, 2 = raised
         listviewstyle       = 2     # 0 = nothing, 1 = dotted 2 = solid
+        
         menubaritemstyle    = 0     # 0 = menuitem look, 1 = button look
         menubarstyle        = 0     # 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
         menuitemstyle       = 0     # 0 = flat, 1 = glassy, 2 = striped
         menustyle           = 0     # 0 = no vertical menu stripe, 1 = display vertical menu stripe
+        
         prelight_shade      = .95  # shade level for scrollbar's slider, comboboxstyle(1), and prelight state with gradient_colors
         progressbarstyle    = 1     # 0 = no stripes, 1 = diagonal stripes, 2 = vertical stripes 
+        
         reliefstyle         = 3     # 0 = flat, 1 = inset, 2 = shadow, 3 = shadow with gradient, 4 = stronger shadow with gradient
         rgba                = FALSE # FALSE = disabled, TRUE = enabled
         roundness           = 3     # 0 = squared, 1 = old default, more will increase roundness
+        
         scrollbarstyle      = 2     # 0 = nothing, 1 = circles, 2 = handles, 3 = diagonal stripes, 4 = diagonal stripes and handles, 5 = horizontal stripes, 6 = horizontal stripes and handles
         shadow_shades       = { 0.8, 2.2 } # draw gradient on shadow of some widgets
         separatorstyle      = 1
         sliderstyle         = 0     # 0 = nothing added, 1 = handles
         spinbuttonstyle     = 0     # 0 = no seperator, 1 = with separator
         stepperstyle        = 1     # 0 = standard, 1 = integrated stepper handles, 2 = squared steppers with round slider
+        
         textstyle           = 1     # 0 = normal text, 1 = inset
         toolbarstyle        = 0     # 0 = flat, 1 = glassy, 2 = gradient
         trough_shades       = { 0.88, 2.0 } # draw gradient on trough of GtkScrollbar and GtkProgressbar
     }
 }
 
+
+include "panel.rc"
 
 style "selected" = "default"
 {
@@ -221,12 +232,15 @@ style "toolbar-item" = "toolbar"
 {
 }
 
-style "notebook" = "wider"
+style "notebook"
 {
+    xthickness = 3
+    ythickness = 2
+    
     engine "murrine"
     {
         contrast            = .65
-        gradient_shades     = {1.1,1.06,0.92,0.85} # { 1.1, 1.02, 0.97, 0.93 }
+        gradient_shades     = {1.1, 1.06, 0.92, 0.85}
         lightborder_shade   = 2.0
     }
 
@@ -318,11 +332,12 @@ style "treeview"
 style "treeview-header" = "selected"
 {
     xthickness = 2
-    ythickness = 1
+    ythickness = 1    
 
     engine "murrine"
     {
         contrast = .8
+        gradient_shades     = {1.3, 1.1, 1.3, 1.1}
     }
 }
 
@@ -373,6 +388,9 @@ style "comboboxentry"
     {
         contrast = .8
     }
+}
+
+style "combobox" = "comboboxentry" {
 }
 
 style "spinbutton" 
