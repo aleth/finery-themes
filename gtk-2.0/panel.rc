@@ -6,7 +6,7 @@
 
 style "theme-panel"
 {
-	bg_pixmap[NORMAL]	= "/Panels/bg_panel_26.png" # Disable for normal panel backgrounds.
+	#bg_pixmap[NORMAL]	= "/Panels/bg_panel_26.png" # Disable for normal panel backgrounds.
 
 	bg[SELECTED]	= shade(1.2, @selected_bg_color) #shade (0.85, @selected_bg_color) # Makes selected items dark.
 	bg[NORMAL]	= "#D4CEBF" # Makes panel background dark.
