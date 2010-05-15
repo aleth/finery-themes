@@ -9,23 +9,23 @@ style "theme-panel"
     xthickness = 3
 	#bg_pixmap[NORMAL]	= "/Panels/bg_panel_26.png" # Disable for normal panel backgrounds.
 
+	bg[NORMAL]	        = "#d4cebf" # Makes panel background dark.
 	bg[SELECTED]	    = shade(1.04, @bg_color) # Makes selected items dark.
-	bg[NORMAL]	        = "#D4CEBF" # Makes panel background dark.
 	bg[PRELIGHT]	    = shade (1.2, @selected_bg_color) # Makes panel button prelight dark.
 	bg[ACTIVE]	        =  shade (0.7, @bg_color) # Makes active buttons dark.
 	bg[INSENSITIVE]	    = "#464139"
 	
-	fg[NORMAL]	        = "#2B2A28" # Makes panel text light.
-	fg[PRELIGHT]	    = "#48453E" # Makes prelighted text colored.
+	fg[NORMAL]	        = "#2b2a28" # Makes panel text light.
+	fg[PRELIGHT]	    = "#48453e" # Makes prelighted text colored.
 	fg[SELECTED]	    = "#333333" # Makes prelighted text colored.
 	fg[ACTIVE]	        = @selected_fg_color  # Makes active text colored.
 	fg[INSENSITIVE]	    = "#666666" # Color for insensitive text.
 	
-	text[NORMAL]	    = "#E6E6E6"
+	text[NORMAL]	    = "#e6e6e6"
 	text[PRELIGHT]	    = "#333333" # Makes prelighted text colored.
 	text[SELECTED]	    = "#333333" # Makes prelighted text colored.
 	text[ACTIVE]	    = @selected_fg_color # Makes active text colored.
-	text[INSENSITIVE]	= "#48453E"
+	text[INSENSITIVE]	= "#48453e"
 
 	engine "murrine" {
 		border_shades       = { 1.08, 1.03 } # gradient to draw on border
