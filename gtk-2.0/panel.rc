@@ -53,10 +53,9 @@ style "theme-panel"
 # For the window list, clock applet etc.
 style "theme-panel-buttons" = "theme-panel"
 {
-	bg[NORMAL]	    = "#E4DECF" # Makes panel background dark.
-	bg[SELECTED]	= shade(1.01, @bg_color) # Makes selected items dark.
+	bg[SELECTED]	= shade(1.0, @bg_color) # Makes selected items dark.
 	bg[PRELIGHT]	= shade (1.18, @theme_color) # Makes panel button prelight dark.
-	bg[ACTIVE]	    =  shade (0.75, @theme_color) # Makes active buttons dark.
+	bg[ACTIVE]	    =  shade (0.67, @theme_color) # Makes active buttons dark.
 	bg[INSENSITIVE]	= "#464139"
 	
 	engine "murrine" {
