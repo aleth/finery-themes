@@ -4,7 +4,7 @@
     <name>Finery</name>
     <author>Kenneth Wimer, James Schriver, Immanuel Peratoner</author>
     <copyright>Canonical Ltd.</copyright>
-    <date>May 11, 2010</date>
+    <date>May 28, 2010</date>
     <description>Metacity theme</description>
 </info>
 
@@ -257,10 +257,10 @@
 
 
 <draw_ops name="minimize_unfocused_normal">
-    <image filename="minimize_unfocused.png" x="0" y="2" width="object_width" height="object_height" alpha=".75"/>
+    <image filename="minimize_unfocused.png" x="0" y="2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="minimize_unfocused_prelight">
-    <image filename="minimize_unfocused_over.png" x="0" y="2" width="object_width" height="object_height" alpha=".75"/>
+    <image filename="minimize_unfocused_prelight.png" x="0" y="2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="minimize_unfocused_pressed">
     <image filename="minimize_pressed.png" x="0" y="2" width="object_width" height="object_height"/>
@@ -279,35 +279,35 @@
 
 
 <draw_ops name="maximize_unfocused_normal">
-    <image filename="maximize_unfocused.png" x="0" y="2" width="object_width" height="object_height" alpha=".75"/>
+    <image filename="maximize_unfocused.png" x="0" y="2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="maximize_unfocused_prelight">
-    <image filename="maximize_unfocused_over.png" x="0" y="2" width="object_width" height="object_height" alpha=".75"/>
+    <image filename="maximize_unfocused_prelight.png" x="0" y="2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="maximize_unfocused_pressed">
-    <image filename="maximize_prelight.png" x="0" y="1" width="object_width" height="object_height"/>
+    <image filename="maximize_pressed.png" x="0" y="1" width="object_width" height="object_height"/>
 </draw_ops>
 
 
 <draw_ops name="unmaximize_focused_normal">
-    <image filename="maximize.png" x="0" y="2" width="object_width" height="object_height"/>
+    <image filename="unmaximize.png" x="0" y="2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="unmaximize_focused_prelight">
-    <image filename="maximize_prelight.png" x="0" y="2" width="object_width" height="object_height"/>
+    <image filename="unmaximize_prelight.png" x="0" y="2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="unmaximize_focused_pressed">
-    <image filename="maximize_pressed.png" x="0" y="2" width="object_width" height="object_height"/>
+    <image filename="unmaximize_pressed.png" x="0" y="2" width="object_width" height="object_height"/>
 </draw_ops>
 
 
 <draw_ops name="unmaximize_unfocused_normal">
-    <image filename="maximize_unfocused.png" x="0" y="2" width="object_width" height="object_height"  alpha=".75"/>
+    <image filename="unmaximize_unfocused.png" x="0" y="2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="unmaximize_unfocused_prelight">
-    <image filename="maximize_unfocused_over.png" x="0" y="2" width="object_width" height="object_height" alpha=".75"/>
+    <image filename="unmaximize_unfocused_prelight.png" x="0" y="2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="unmaximize_unfocused_pressed">
-    <image filename="maximize_pressed.png" x="0" y="2" width="object_width" height="object_height"/>
+    <image filename="unmaximize_pressed.png" x="0" y="2" width="object_width" height="object_height"/>
 </draw_ops>
 
 
@@ -323,10 +323,10 @@
 
 
 <draw_ops name="close_unfocused_normal">
-    <image filename="close_unfocused.png" x="0" y="2" width="object_width" height="object_height" alpha=".8"/>
+    <image filename="close_unfocused.png" x="0" y="2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="close_unfocused_prelight">
-    <image filename="close_unfocused_over.png" x="0" y="2" width="object_width" height="object_height" alpha=".8"/>
+    <image filename="close_unfocused_prelight.png" x="0" y="2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="close_unfocused_pressed">
     <image filename="close_pressed.png" x="0" y="2" width="object_width" height="object_height"/>
