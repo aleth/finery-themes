@@ -71,6 +71,11 @@ style "theme-panel-buttons" = "theme-panel"
 	}
 }
 
+style "theme-panel-light"
+{
+    fg[NORMAL]  = @fg_color
+}
+
 # Panel settings
 widget "*PanelWidget*"		style "theme-panel"
 widget "*PanelApplet*"		style "theme-panel-buttons"
