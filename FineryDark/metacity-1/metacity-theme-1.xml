@@ -99,7 +99,7 @@
     <!-- Background gradient -->
     <gradient type="vertical" x="0" y="0" width="width+9" height="height">
         <color value="#63635e" />
-        <color value="#3c3b37" />
+        <color value="#3d3c37" />
     </gradient>
     
     <!-- Topmost bright line -->

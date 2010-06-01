@@ -486,7 +486,7 @@ style "vscrollbar"
 
 style "menubar" = "dark"
 {
-    bg[NORMAL] = "#3d3c37"
+    bg[NORMAL] = "#3c3b37"
 }
 
 style "soundfix"
