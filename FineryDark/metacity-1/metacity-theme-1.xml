@@ -14,15 +14,15 @@
 <frame_geometry name="frame_geometry_normal" title_scale="medium" rounded_top_left="true"  rounded_top_right="true"  rounded_bottom_left="true" rounded_bottom_right="true">
      <distance name="left_width" value="1"/>
     <distance name="right_width" value="1"/>
-    <distance name="bottom_height" value="5"/>
+    <distance name="bottom_height" value="4"/>
     <distance name="left_titlebar_edge" value="8"/>
     <distance name="right_titlebar_edge" value="8"/>
-    <distance name="button_width" value="20"/>
+    <distance name="button_width" value="19"/>
     <distance name="button_height" value="20"/>
     <distance name="title_vertical_pad" value="8"/>
     
     <border name="title_border" left="2" right="2" top="2" bottom="0"/>
-    <border name="button_border" left="0" right="0" top="2" bottom="1"/>
+    <border name="button_border" left="0" right="0" top="3" bottom="2"/>
 </frame_geometry>
 
 <frame_geometry name="geometry_maximized" rounded_top_left="false" rounded_top_right="false"  rounded_bottom_left="false" rounded_bottom_right="false">
@@ -31,12 +31,12 @@
     <distance name="bottom_height" value="0"/>
     <distance name="left_titlebar_edge" value="10"/>
       <distance name="right_titlebar_edge" value="10"/>
-      <distance name="button_width" value="20"/>
+      <distance name="button_width" value="19"/>
       <distance name="button_height" value="20"/>
       <distance name="title_vertical_pad" value="8"/>
       
       <border name="title_border" left="2" right="2" top="2" bottom="0"/>
-     <border name="button_border" left="0" right="0" top="2" bottom="1"/>
+     <border name="button_border" left="0" right="0" top="3" bottom="1"/>
 </frame_geometry>
 
 <frame_geometry name="border" has_title="false">
