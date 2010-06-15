@@ -226,6 +226,8 @@ style "entry"
 
 style "button" = "selected"
 {
+    GtkButton::focus-line-width = 0
+
     xthickness = 3
     ythickness = 3
 
@@ -248,6 +250,8 @@ style "button" = "selected"
         gradient_shades     = {1.4,1.2,1.2,1.1}
         shadow_shades       = {0.65,0.85}
         roundness           = 2
+
+        focus_color         = shade(1.25, @colored_color)
     }
 }
 
@@ -267,8 +271,10 @@ style "notebook"
     engine "murrine"
     {
         contrast            = .6
-        gradient_shades     = {1.1, 1.06, 0.92, 0.85}
+        gradient_shades     = {1.35,1.25,1.0,0.7}
         lightborder_shade   = 2.0
+
+        focus_color         = shade(1.07, @theme_color)
     }
 
     #bg[ACTIVE]   = shade (0.92, @bg_color)

@@ -7,9 +7,9 @@
 #
 # Feel free to modify and share!
 
-gtk_color_scheme = "fg_color:#404040\nbg_color:#f7f5f0\nbase_color:#ffffff\ntext_color:#323232\nselected_bg_color:#d6d4ca\nselected_fg_color:#323232\ntooltip_bg_color:#120d04\ntooltip_fg_color:#fff5fc\nlink_color:#dd4a14\ncolored_color:#ff8442\ntheme_color:#f2ede4"
+gtk_color_scheme = "fg_color:#3c3b37\nbg_color:#f1ece3\nbase_color:#ffffff\ntext_color:#3a3935\nselected_bg_color:#c6b9a6\nselected_fg_color:#323232\ntooltip_bg_color:#120d04\ntooltip_fg_color:#fff5fc\nlink_color:#dd4a14\ncolored_color:#ff8442\ntheme_color:#f2ede4"
 
-gtk-icon-sizes = "panel-menu=26,26:gtk-button=16,16"
+gtk-icon-sizes = "panel-menu=22,22:gtk-button=16,16"
 
 gtk-auto-mnemonics = 1 
 
@@ -81,14 +81,14 @@ style "default"
     # Color Definitions
     ####################
     fg[NORMAL]        = @fg_color
-    fg[PRELIGHT]      = @fg_color
+    fg[PRELIGHT]      = @text_color
     fg[ACTIVE]        = @fg_color
     fg[SELECTED]      = @selected_fg_color
     fg[INSENSITIVE]   = darker (@bg_color)
     
     bg[NORMAL]        = @bg_color
-    bg[PRELIGHT]      = shade (1.02, @bg_color)
-    bg[ACTIVE]        = shade (0.88, @bg_color)
+	bg[PRELIGHT]    	= shade (.65, @selected_bg_color)
+    bg[ACTIVE]        = shade (0.84, @bg_color)
     bg[SELECTED]      = @selected_bg_color
     bg[INSENSITIVE]   = @bg_color
     
@@ -156,13 +156,39 @@ style "default"
     }
 }
 
-
 include "panel.rc"
+
+style "dark" = "default"
+{
+	fg[NORMAL]      	= "#dfd8c8"
+	fg[PRELIGHT]   	= "#fff"
+	fg[ACTIVE]      	= "#fff"
+	fg[SELECTED]    	= @text_color
+	fg[INSENSITIVE] 	= "#99958b"
+
+	bg[NORMAL]		    = @fg_color
+	bg[PRELIGHT]    	= shade (.65, @theme_color)
+	bg[ACTIVE]		    = shade(.55, @selected_bg_color)
+	bg[SELECTED]    	= mix(0.49, shade(0.7, @theme_color), shade(0.72, @bg_color))
+	bg[INSENSITIVE]	= @fg_color
+
+	base[NORMAL]		= @base_color
+	base[PRELIGHT]		= shade (0.95, @bg_color)
+	base[ACTIVE]		= shade (0.55, @bg_color)
+	base[SELECTED]		= shade (1.0, @selected_bg_color)
+	base[INSENSITIVE]	= @bg_color
+
+	text[NORMAL]		= "#dfd8c8"
+	text[PRELIGHT]		= @base_color
+	text[ACTIVE]		= @base_color
+	text[SELECTED]		= @base_color
+	text[INSENSITIVE]	= mix (0.5, @bg_color, @fg_color)
+}
 
 style "selected" = "default"
 {
     bg[NORMAL]      = shade (0.75, @bg_color)
-    bg[PRELIGHT]    = shade (0.85, @bg_color)
+    bg[PRELIGHT]    = shade (0.7, @theme_color)
     bg[SELECTED]    = shade (0.85, @bg_color)
     bg[ACTIVE]      = shade (0.75, @bg_color)
     bg[INSENSITIVE] = mix (0.35, @selected_bg_color, @bg_color)
@@ -191,7 +217,7 @@ style "entry"
     engine "murrine"
     {
         border_shades   = {1.22, 0.88 }
-        contrast        = .6
+        contrast        = .65
         
         lightborderstyle    = 1     # 0 = lightborder on top side, 1 = lightborder on all sides
         lightborder_shade   = 2.0
@@ -200,9 +226,6 @@ style "entry"
 
 style "button" = "selected"
 {
-    #GtkButton::focus-padding = 0
-    GtkButton::focus-line-width = 0
-
     xthickness = 3
     ythickness = 3
 
@@ -225,14 +248,7 @@ style "button" = "selected"
         gradient_shades     = {1.4,1.2,1.2,1.1}
         shadow_shades       = {0.65,0.85}
         roundness           = 2
-
-        focus_color         = shade(1.25, @colored_color)
     }
-
-    #engine "equinox"
-    #{
-    #    buttonstyle	= 0
-    #}
 }
 
 style "toolbar" 
@@ -247,53 +263,31 @@ style "notebook"
 {
     xthickness = 3
     ythickness = 2
-
-    #GtkWidget::focus-line-width = 0
     
     engine "murrine"
     {
-        contrast            = .65
-#        gradient_shades     = {1.1, 1.06, 0.92, 0.85}
-        gradient_shades	    = {1.35,1.25,1.0,0.7}
+        contrast            = .6
+        gradient_shades     = {1.1, 1.06, 0.92, 0.85}
         lightborder_shade   = 2.0
-
-        focus_color         = shade(1.07, @theme_color)
     }
 
     #bg[ACTIVE]   = shade (0.92, @bg_color)
 }
-
-style "panel" = "selected"
-{
-    xthickness = 0
-    ythickness = 0
-
-    bg_pixmap[NORMAL] = "panel_bg.png"
-
-    bg[ACTIVE]      = shade (0.7, @selected_bg_color)    
-    bg[PRELIGHT]    = shade (0.8, @selected_bg_color)
-        
-    engine "murrine" 
-    {
-        roundness       = 2
-        border_colors   = { "#cfcfcf", "#bfbfbf" }
-    }
-}
-
 
 style "terminal" 
 {
     text[NORMAL] = "#ffffff"
     base[NORMAL] = "#300a24"
     
-    TerminalScreen::background-darkness = 0.95
+    TerminalScreen::background-darkness = 0.94
 }
 
-style "menu" 
+style "menu" = "dark"
 {
     xthickness = 0
     ythickness = 0
 
+    
     bg[INSENSITIVE] = mix (0.4, @selected_bg_color, @bg_color)
 
     engine "murrine" 
@@ -302,35 +296,44 @@ style "menu"
     }
 }
 
-style "menu-item" = "default"
+style "menu-item" = "menu"
 {
     xthickness = 0
     ythickness = 4
-
-    bg[SELECTED] = shade (0.92, @theme_color)
     
     engine "murrine" 
     {
-        roundness   = 0
-        contrast            = 0.55
+        roundness           = 0
+        contrast            = 0.6
         
-        border_shades       = { 1.25, 1.05 }
-        gradient_shades     = {1.2, 1.0, 1.2, 1.0}
+        border_shades       = { 1.32, 1.12 }
+        gradient_shades     = {0.96, 0.75, 0.96, 0.75}
+		
+	glazestyle          = 3     # 0 = flat, 1 = curved, 2 = concave, 3 = top-curved, 4 = beryl
+	glow_shade          = 1.4   # sets glow amount for buttons or widgets
+	glowstyle           = 4
+	
+	highlight_shade     = 1.05  # set highlight amount for buttons or widgets
+	
+	lightborder_shade   = 1.6   # sets lightborder amount for buttons or widgets
+	lightborderstyle    = 1     # 0 = lightborder on top side, 1 = lightborder on all sides
+	
+	shadow_shades 	    = { 0.3, 0.1 } # draw gradient on shadow of some widgets
+	textstyle           = 1     # 0 = normal text, 1 = inset
     }
-
-
 }
 
 style "separator-menu-item"
 {
     GtkWidget::wide-separators  = 1
     GtkWidget::separator-width  = 1
-    GtkWidget::separator-height = 2
+    GtkWidget::separator-height = 1
     
     xthickness = 4
     ythickness = 0
-}
 
+	bg[NORMAL] = shade(0.8, @selected_bg_color)
+}
 style "treeview"
 {
     base[ACTIVE] = shade (0.95, @theme_color)
@@ -406,7 +409,7 @@ style "comboboxentry"
     }
 }
 
-style "combobox" = "comboboxentry" {
+style "combobox" = "dark" {
 }
 
 style "spinbutton" 
@@ -416,26 +419,7 @@ style "spinbutton"
 style "scale"
 {
     GtkRange::slider-width = 13
-    
-    #engine "murrine"
-    #{
-    #    contrast            = 0.7
-    #    border_shades       = {1.0, 1.14}
-    #    
-    #    glazestyle          = 0     # 0 = flat, 1 = curved, 2 = concave, 3 = top-curved, 4 = beryl
-    #    glow_shade          = 1.8   # sets glow amount for buttons or widgets
-    #    glowstyle           = 2     # 0 = top, 1 = bottom, 2 = top and bottom, 3 = center (vertical), 4 = center (horizontal) 
-    #    highlight_shade     = 1.06  # set highlight amount for buttons or widgets
-    #    roundness           = 8
 
-    #   lightborderstyle    = 1     # 0 = lightborder on top side, 1 = lightborder on all sides
-    #    lightborder_shade   = 1.6
-    #}
-
-    #bg[NORMAL]      = shade (1.24, @bg_color)
-    #bg[PRELIGHT]    = shade (.85, @bg_color)
-    #bg[ACTIVE]      = shade (2.85, @bg_color)
-    #bg[SELECTED]    = @colored_color
 	engine "equinox" 
 	{
     	curvature = 6
@@ -483,9 +467,9 @@ style "vscrollbar"
 {
 }
 
-style "menubar" = "default"
+style "menubar" = "dark"
 {
-    bg[NORMAL] = "#d2cbbb" #"#cfcfcf" #"#e0d6ba"
+    bg[NORMAL] = "#3c3b37"
 }
 
 style "soundfix"
@@ -520,28 +504,13 @@ style "radiocheck"
         curvature       = 1.0
         checkradiostyle = 0
     }
-    
-    #engine "murrine"
-    #{
-    #    contrast            = 0.6
-    #    highlight_shade     = 1.02
-    #    lightborderstyle    = 1
-    #    lightborder_shade   = 2.2
-    #    glow_shade          = 1.7   # sets glow amount for buttons or widgets
-    #    glowstyle           = 3     # 0 = top, 1 = bottom, 2 = top and bottom, 3 = center (vertical), 4 = center (horizontal) 
-    #    gradient_shades     = {1.5,1.3,1.1,1.0}
-    #    border_shades       = {1.25, 0.95}
-    #    shadow_shades       = {0.4,0.2}
-    #}
 }
-
-
 
 #########################################
 # Matches
 #########################################
 
-widget "ido-offscreen-scale" style "soundfix"
+widget "ido-offscreen-scale" style "menubar"
 widget "*IdoEntryMenuItem*" style "wide"
 
 # default style is applied to every widget
@@ -631,24 +600,25 @@ widget_class "*Nautilus*Side*.GtkWidget"        style "nautilus-sidebar"
 # on comboboxes in appears-as-list mode though.
 style "combobox-text-color-workaround"
 {
-    text[NORMAL]      = @fg_color
-    text[PRELIGHT]    = @fg_color
-    text[ACTIVE]      = @fg_color
-    text[SELECTED]    = @selected_fg_color
-    text[INSENSITIVE] = shade (0.65, @bg_color)
+	text[NORMAL]      = @fg_color
+	text[PRELIGHT]    = @fg_color
+	text[ACTIVE]      = @fg_color
+	text[SELECTED]    = @selected_fg_color
+	text[INSENSITIVE] = shade (0.65, @bg_color)
 }
-widget_class "*.<GtkComboBox>.<GtkCellView>"        style "combobox-text-color-workaround"
+widget_class "*.<GtkComboBox>.<GtkCellView>"		style "combobox-text-color-workaround"
 
-style "menuitem-text-is-fg-color-workaround"
+style "menuitem-text-is-fg-color-workaround" = "menu-item"
 {
-    text[NORMAL]        = @fg_color
-    text[PRELIGHT]      = @selected_fg_color
-    text[ACTIVE]        = @fg_color
-    text[SELECTED]      = @selected_fg_color
-    text[INSENSITIVE]   = shade (0.65, @bg_color)
+	text[NORMAL]        = "#dfd8c8"
+	text[PRELIGHT]      = @base_color
+	text[SELECTED]      = @base_color
+	text[ACTIVE]        = @base_color
+	text[INSENSITIVE]   = "#99958b"
 }
 
-widget "*.gtk-combobox-popup-menu.*"               style "menuitem-text-is-fg-color-workaround"
+widget "*.gtk-combobox-popup-menu.*"   			style "menuitem-text-is-fg-color-workaround"
+
 
 # Work around the usage of GtkLabel inside GtkListItems to display text.
 # This breaks because the label is shown on a background that is based on the

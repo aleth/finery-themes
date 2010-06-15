@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-    <name>FineryDark</name>
-    <author>Kenneth Wimer, James Schriver, Immanuel Peratoner, Jonian Guveli</author>
+    <name>Finery</name>
+    <author>Kenneth Wimer, James Schriver, Immanuel Peratoner</author>
     <copyright>Canonical Ltd.</copyright>
-    <date>June 14, 2010</date>
+    <date>May 28, 2010</date>
     <description>Metacity theme</description>
 </info>
 
@@ -14,15 +14,15 @@
 <frame_geometry name="frame_geometry_normal" title_scale="medium" rounded_top_left="true"  rounded_top_right="true"  rounded_bottom_left="true" rounded_bottom_right="true">
      <distance name="left_width" value="1"/>
     <distance name="right_width" value="1"/>
-    <distance name="bottom_height" value="4"/>
+    <distance name="bottom_height" value="5"/>
     <distance name="left_titlebar_edge" value="8"/>
     <distance name="right_titlebar_edge" value="8"/>
-    <distance name="button_width" value="19"/>
+    <distance name="button_width" value="20"/>
     <distance name="button_height" value="20"/>
     <distance name="title_vertical_pad" value="8"/>
     
     <border name="title_border" left="2" right="2" top="2" bottom="0"/>
-    <border name="button_border" left="0" right="0" top="3" bottom="2"/>
+    <border name="button_border" left="0" right="0" top="2" bottom="1"/>
 </frame_geometry>
 
 <frame_geometry name="geometry_maximized" rounded_top_left="false" rounded_top_right="false"  rounded_bottom_left="false" rounded_bottom_right="false">
@@ -31,12 +31,12 @@
     <distance name="bottom_height" value="0"/>
     <distance name="left_titlebar_edge" value="10"/>
       <distance name="right_titlebar_edge" value="10"/>
-      <distance name="button_width" value="19"/>
+      <distance name="button_width" value="20"/>
       <distance name="button_height" value="20"/>
       <distance name="title_vertical_pad" value="8"/>
       
       <border name="title_border" left="2" right="2" top="2" bottom="0"/>
-     <border name="button_border" left="0" right="0" top="3" bottom="1"/>
+     <border name="button_border" left="0" right="0" top="2" bottom="1"/>
 </frame_geometry>
 
 <frame_geometry name="border" has_title="false">
@@ -56,38 +56,38 @@
 <!-- Window Title -->
 
 <draw_ops name="draw_title_text_normal">
-  <title color="#231f1c"
+  <title color="#e8e5dd"
          x="((1 `max` (width-title_width)) / 2)-23"
-         y="(((height - title_height) / 2) `max` 0)-1"/>
-  <title color="#231f1c"
+         y="(((height - title_height) / 2) `max` 0)+1"/>
+  <title color="#e8e5dd"
          x="((1 `max` (width-title_width)) / 2)-23"
          y="(((height - title_height) / 2) `max` 0)"/>
-  <title color="#231f1c"
-         x="((1 `max` (width-title_width)) / 2)-23+1"
-         y="(((height - title_height) / 2) `max` 0)"/>
-  <title color="#231f1c"
+  <title color="#e8e5dd"
          x="((1 `max` (width-title_width)) / 2)-23-1"
          y="(((height - title_height) / 2) `max` 0)"/>
   <title color="#e8e5dd"
+         x="((1 `max` (width-title_width)) / 2)-23+1"
+         y="(((height - title_height) / 2) `max` 0)"/>
+  <title color="#615b4c"
          x="((1 `max` (width-title_width)) / 2)-23"
          y="(((height - title_height) / 2) `max` 0)"/>
 
 </draw_ops>
 
 <draw_ops name="draw_title_text_inactive">
-  <title color="#433f3c"
+  <title color="#e8e5dd"
          x="((1 `max` (width-title_width)) / 2)-23"
-         y="(((height - title_height) / 2) `max` 0)-1"/>
-  <title color="#433f3c"
+         y="(((height - title_height) / 2) `max` 0)+1"/>
+  <title color="#e8e5dd"
          x="((1 `max` (width-title_width)) / 2)-23"
          y="(((height - title_height) / 2) `max` 0)"/>
-  <title color="#433f3c"
-         x="((1 `max` (width-title_width)) / 2)-23+1"
-         y="(((height - title_height) / 2) `max` 0)"/>
-  <title color="#433f3c"
+  <title color="#e8e5dd"
          x="((1 `max` (width-title_width)) / 2)-23-1"
          y="(((height - title_height) / 2) `max` 0)"/>
-  <title color="#b7b4ae"
+  <title color="#e8e5dd"
+         x="((1 `max` (width-title_width)) / 2)-23+1"
+         y="(((height - title_height) / 2) `max` 0)"/>
+  <title color="#756f60"
          x="((1 `max` (width-title_width)) / 2)-23"
          y="(((height - title_height) / 2) `max` 0)"/>
 </draw_ops>
@@ -98,25 +98,25 @@
 <draw_ops name="draw_title">
     <!-- Background gradient -->
     <gradient type="vertical" x="0" y="0" width="width+9" height="height">
-        <color value="#63635e" />
-        <color value="#3d3c37" />
+        <color value="#e9e6dd" />
+        <color value="#d2cbbb" />
     </gradient>
     
     <!-- Topmost bright line -->
-    <line color="shade/gtk:bg[NORMAL]/0.3" x1="0" x2="width" y1="0" y2="0"/>
+    <line color="shade/gtk:bg[NORMAL]/1.0" x1="0" x2="width" y1="0" y2="0"/>
     
     <!-- Brightening of the left arch -->
-    <line color="shade/gtk:bg[NORMAL]/0.18" x1="0" x2="4" y1="1" y2="1"/>
-    <line color="shade/gtk:bg[NORMAL]/0.19" x1="0" x2="2" y1="2" y2="2"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="0" x2="1" y1="3" y2="3"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="0" x2="1" y1="4" y2="4"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="0" x2="0" y1="5" y2="40"/>
+    <line color="shade/gtk:bg[NORMAL]/0.9" x1="0" x2="4" y1="1" y2="1"/>
+    <line color="shade/gtk:bg[NORMAL]/0.9" x1="0" x2="2" y1="2" y2="2"/>
+    <line color="shade/gtk:bg[NORMAL]/0.9" x1="0" x2="1" y1="3" y2="3"/>
+    <line color="shade/gtk:bg[NORMAL]/0.9" x1="0" x2="1" y1="4" y2="4"/>
+    <line color="shade/gtk:bg[NORMAL]/0.9" x1="0" x2="0" y1="5" y2="40"/>
     
-    <line color="shade/gtk:bg[NORMAL]/0.18" x1="width-5" x2="width" y1="1" y2="1"/>
-    <line color="shade/gtk:bg[NORMAL]/0.19" x1="width-3" x2="width" y1="2" y2="2"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="width-2" x2="width" y1="3" y2="3"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="width-2" x2="width" y1="4" y2="4"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="width-1" x2="width" y1="5" y2="90"/>
+    <line color="shade/gtk:bg[NORMAL]/0.9" x1="width-5" x2="width" y1="1" y2="1"/>
+    <line color="shade/gtk:bg[NORMAL]/0.9" x1="width-3" x2="width" y1="2" y2="2"/>
+    <line color="shade/gtk:bg[NORMAL]/0.9" x1="width-2" x2="width" y1="3" y2="3"/>
+    <line color="shade/gtk:bg[NORMAL]/0.9" x1="width-2" x2="width" y1="4" y2="4"/>
+    <line color="shade/gtk:bg[NORMAL]/0.9" x1="width-1" x2="width" y1="5" y2="90"/>
     
     <!-- Top highlight -->
     <!-- This uses <tint> (which supports alpha) instead of <line> (which doesn't) -->
@@ -131,31 +131,29 @@
 <draw_ops name="draw_title_inactive">
     <!-- Background gradient -->
     <gradient type="vertical" x="0" y="0" width="width+9" height="height">
-        <color value="#595954" />
-        <color value="#3c3b37" />
+        <color value="#e8e7e1" />
+        <color value="#d2cbbb" />
     </gradient>
     
     <!-- Topmost bright line -->
-    <line color="shade/gtk:bg[NORMAL]/0.3" x1="0" x2="width" y1="0" y2="0"/>
+    <line color="shade/gtk:bg[NORMAL]/1.0" x1="0" x2="width" y1="0" y2="0"/>
     
     <!-- Brightening of the left arch -->
-    <line color="shade/gtk:bg[NORMAL]/0.18" x1="0" x2="4" y1="1" y2="1"/>
-    <line color="shade/gtk:bg[NORMAL]/0.19" x1="0" x2="2" y1="2" y2="2"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="0" x2="1" y1="3" y2="3"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="0" x2="1" y1="4" y2="4"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="0" x2="0" y1="5" y2="40"/>
+    <line color="shade/gtk:bg[NORMAL]/0.9" x1="0" x2="4" y1="1" y2="1"/>
+    <line color="shade/gtk:bg[NORMAL]/0.9" x1="0" x2="2" y1="2" y2="2"/>
+    <line color="shade/gtk:bg[NORMAL]/0.9" x1="0" x2="1" y1="3" y2="3"/>
+    <line color="shade/gtk:bg[NORMAL]/0.9" x1="0" x2="1" y1="4" y2="4"/>
+    <line color="shade/gtk:bg[NORMAL]/0.9" x1="0" x2="0" y1="5" y2="40"/>
     
-    <line color="shade/gtk:bg[NORMAL]/0.18" x1="width-5" x2="width" y1="1" y2="1"/>
-    <line color="shade/gtk:bg[NORMAL]/0.19" x1="width-3" x2="width" y1="2" y2="2"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="width-2" x2="width" y1="3" y2="3"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="width-2" x2="width" y1="4" y2="4"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="width-1" x2="width" y1="5" y2="90"/>
+    <line color="shade/gtk:bg[NORMAL]/0.9" x1="width-5" x2="width" y1="1" y2="1"/>
+    <line color="shade/gtk:bg[NORMAL]/0.9" x1="width-3" x2="width" y1="2" y2="2"/>
+    <line color="shade/gtk:bg[NORMAL]/0.9" x1="width-2" x2="width" y1="3" y2="3"/>
+    <line color="shade/gtk:bg[NORMAL]/0.9" x1="width-2" x2="width" y1="4" y2="4"/>
+    <line color="shade/gtk:bg[NORMAL]/0.9" x1="width-1" x2="width" y1="5" y2="90"/>
     
     <!-- Top highlight -->
-    <!-- This uses <tint> (which supports alpha) instead of <line> (which doesn't) -->
-    <tint color="#ffffff" alpha="0.05" x="5" y="1" width="width - 10" height="1"/>
-    <tint color="#ffffff" alpha="0.02" x="5" y="2" width="width - 10" height="1"/>
-    <tint color="#ffffff" alpha="0.2" x="0" y="1" width="width" height="1"/>
+    <tint color="#ffffff" alpha="0.25" x="5" y="1" width="width - 10" height="1"/> 
+    <tint color="#ffffff" alpha="0.05" x="5" y="2" width="width - 10" height="1"/>
 </draw_ops>
 
 
@@ -164,18 +162,16 @@
 <draw_ops name="draw_title_maximized">
     <!-- Background gradient -->
     <gradient type="vertical" x="0" y="0" width="width+9" height="height">
-        <color value="#595954" />
-        <color value="#3c3b37" />
+        <color value="#e9e6dd" />
+        <color value="#d2cbbb" />
     </gradient>
-    
+
     <!-- Topmost bright line -->
-    <line color="shade/gtk:bg[NORMAL]/0.3" x1="0" x2="width" y1="0" y2="0"/>
+    <line color="shade/gtk:bg[NORMAL]/1.0" x1="0" x2="width" y1="0" y2="0"/>
 
     <!-- Top highlight -->
-    <!-- This uses <tint> (which supports alpha) instead of <line> (which doesn't) -->
-    <tint color="#ffffff" alpha="0.05" x="5" y="1" width="width - 10" height="1"/>
-    <tint color="#ffffff" alpha="0.02" x="5" y="2" width="width - 10" height="1"/>
-    <tint color="#ffffff" alpha="0.2" x="0" y="1" width="width" height="1"/>
+    <tint color="#ffffff" alpha="0.25" x="5" y="1" width="width - 10" height="1"/> 
+    <tint color="#ffffff" alpha="0.05" x="5" y="2" width="width - 10" height="1"/>
 </draw_ops>
 
 
@@ -186,8 +182,8 @@
 
     <!-- Background gradient -->
     <gradient type="vertical" x="0" y="0" width="width+9" height="height">
-        <color value="#595954" />
-        <color value="#3c3b37" />
+        <color value="#e8e7e1" />
+        <color value="#d2cbbb" />
     </gradient>
 </draw_ops>
 
@@ -195,35 +191,35 @@
 <!-- Window Frames -->
 
 <draw_ops name="draw_frame">
-    <rectangle color="shade/gtk:bg[NORMAL]/0.2" x="0" y="0" width="width" height="height" filled="true"/>
+    <rectangle color="shade/gtk:bg[NORMAL]/0.92" x="0" y="0" width="width" height="height" filled="true"/>
 </draw_ops>
 
 
 <!-- Bottom border -->
 
 <draw_ops name="bottom_edge">
-    <line color="shade/gtk:bg[NORMAL]/0.22" x1="0" x2="width" y1="height-1" y2="height-1"/>
+<line color="shade/gtk:bg[NORMAL]/0.74" x1="0" x2="width" y1="height-1" y2="height-1"/>
     <!-- bottom left rounding -->
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="0" x2="1" y1="0" y2="0"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="0" x2="1" y1="1" y2="1"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="0" x2="2" y1="2" y2="2"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="0" x2="4" y1="3" y2="3"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="0" x2="10" y1="4" y2="4"/>
+    <line color="shade/gtk:bg[NORMAL]/0.74" x1="0" x2="1" y1="0" y2="0"/>
+    <line color="shade/gtk:bg[NORMAL]/0.74" x1="0" x2="1" y1="1" y2="1"/>
+    <line color="shade/gtk:bg[NORMAL]/0.74" x1="0" x2="2" y1="2" y2="2"/>
+    <line color="shade/gtk:bg[NORMAL]/0.74" x1="0" x2="4" y1="3" y2="3"/>
+    <line color="shade/gtk:bg[NORMAL]/0.74" x1="0" x2="10" y1="4" y2="4"/>
     
     <!-- bottom right rounding -->
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="width-2" x2="width-1" y1="0" y2="0"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="width-2" x2="width-1" y1="1" y2="1"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="width-3" x2="width-2" y1="2" y2="2"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="width-5" x2="width-3" y1="3" y2="3"/>
+    <line color="shade/gtk:bg[NORMAL]/0.74" x1="width-2" x2="width-1" y1="0" y2="0"/>
+    <line color="shade/gtk:bg[NORMAL]/0.74" x1="width-2" x2="width-1" y1="1" y2="1"/>
+    <line color="shade/gtk:bg[NORMAL]/0.74" x1="width-3" x2="width-2" y1="2" y2="2"/>
+    <line color="shade/gtk:bg[NORMAL]/0.74" x1="width-5" x2="width-3" y1="3" y2="3"/>
 </draw_ops>
 
 <draw_ops name="border">
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="1" y1="height - 2" x2="width - 2" y2="height - 2"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="width - 2" y1="1" x2="width - 2" y2="height - 2"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="1" y1="1" x2="width - 2" y2="1"/>
-    <line color="shade/gtk:bg[NORMAL]/0.2" x1="1" y1="1" x2="1" y2="height - 2"/>
+    <line color="shade/gtk:bg[NORMAL]/0.88" x1="1" y1="height - 2" x2="width - 2" y2="height - 2"/>
+    <line color="shade/gtk:bg[NORMAL]/0.88" x1="width - 2" y1="1" x2="width - 2" y2="height - 2"/>
+    <line color="shade/gtk:bg[NORMAL]/1.4" x1="1" y1="1" x2="width - 2" y2="1"/>
+    <line color="shade/gtk:bg[NORMAL]/1.4" x1="1" y1="1" x2="1" y2="height - 2"/>
     
-    <rectangle color="shade/gtk:bg[NORMAL]/1.4" filled="false"
+    <rectangle color="shade/gtk:bg[NORMAL]/0.25" filled="false"
                x="0" y="0"
                width="width - 1"
                height="height - 1"/>
@@ -261,10 +257,10 @@
 
 
 <draw_ops name="minimize_unfocused_normal">
-    <image filename="minimize_unfocused.png" x="0" y="2" width="object_width" height="object_height" alpha=".85"/>
+    <image filename="minimize_unfocused.png" x="0" y="2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="minimize_unfocused_prelight">
-    <image filename="minimize_unfocused_prelight.png" x="0" y="2" width="object_width" height="object_height" alpha=".85"/>
+    <image filename="minimize_unfocused_prelight.png" x="0" y="2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="minimize_unfocused_pressed">
     <image filename="minimize_pressed.png" x="0" y="2" width="object_width" height="object_height"/>
@@ -283,10 +279,10 @@
 
 
 <draw_ops name="maximize_unfocused_normal">
-    <image filename="maximize_unfocused.png" x="0" y="2" width="object_width" height="object_height" alpha=".85"/>
+    <image filename="maximize_unfocused.png" x="0" y="2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="maximize_unfocused_prelight">
-    <image filename="maximize_unfocused_prelight.png" x="0" y="2" width="object_width" height="object_height" alpha=".85"/>
+    <image filename="maximize_unfocused_prelight.png" x="0" y="2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="maximize_unfocused_pressed">
     <image filename="maximize_pressed.png" x="0" y="1" width="object_width" height="object_height"/>
@@ -305,10 +301,10 @@
 
 
 <draw_ops name="unmaximize_unfocused_normal">
-    <image filename="unmaximize_unfocused.png" x="0" y="2" width="object_width" height="object_height" alpha=".85"/>
+    <image filename="unmaximize_unfocused.png" x="0" y="2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="unmaximize_unfocused_prelight">
-    <image filename="unmaximize_unfocused_prelight.png" x="0" y="2" width="object_width" height="object_height" alpha=".85"/>
+    <image filename="unmaximize_unfocused_prelight.png" x="0" y="2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="unmaximize_unfocused_pressed">
     <image filename="unmaximize_pressed.png" x="0" y="2" width="object_width" height="object_height"/>
@@ -327,10 +323,10 @@
 
 
 <draw_ops name="close_unfocused_normal">
-    <image filename="close_unfocused.png" x="0" y="2" width="object_width" height="object_height" alpha=".85"/>
+    <image filename="close_unfocused.png" x="0" y="2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="close_unfocused_prelight">
-    <image filename="close_unfocused_prelight.png" x="0" y="2" width="object_width" height="object_height" alpha=".85"/>
+    <image filename="close_unfocused_prelight.png" x="0" y="2" width="object_width" height="object_height"/>
 </draw_ops>
 <draw_ops name="close_unfocused_pressed">
     <image filename="close_pressed.png" x="0" y="2" width="object_width" height="object_height"/>
@@ -475,4 +471,3 @@
 <window type="border" style_set="border"/>
 
 </metacity_theme> 
-    
