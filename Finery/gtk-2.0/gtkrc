@@ -268,8 +268,6 @@ style "panel" = "selected"
     xthickness = 0
     ythickness = 0
 
-    bg_pixmap[NORMAL] = "panel_bg.png"
-
     bg[ACTIVE]      = shade (0.7, @selected_bg_color)    
     bg[PRELIGHT]    = shade (0.8, @selected_bg_color)
         
