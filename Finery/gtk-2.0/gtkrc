@@ -488,11 +488,6 @@ style "menubar" = "default"
     bg[NORMAL] = "#d2cbbb" #"#cfcfcf" #"#e0d6ba"
 }
 
-style "soundfix"
-{
-    bg[NORMAL] = "#F7F5F2"
-}
-
 style "frame"
 {
 }
@@ -541,7 +536,7 @@ style "radiocheck"
 # Matches
 #########################################
 
-widget "ido-offscreen-scale" style "soundfix"
+widget "*IdoScaleMenuItem*" style "scale"
 widget "*IdoEntryMenuItem*" style "wide"
 
 # default style is applied to every widget
