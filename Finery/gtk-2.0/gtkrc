@@ -537,6 +537,8 @@ style "radiocheck"
 widget "*IdoScaleMenuItem*" style "scale"
 widget "*IdoEntryMenuItem*" style "wide"
 
+widget "*Banshee*Notification*SeekSlider*" style "scale"
+
 # default style is applied to every widget
 class "GtkWidget"    style "default"
 
