@@ -228,8 +228,8 @@ style "button" = "selected"
 {
     GtkButton::focus-line-width = 0
 
-    xthickness = 3
-    ythickness = 3
+    xthickness = 4
+    ythickness = 4
 
     bg[NORMAL]      = shade (0.8, @theme_color)
     bg[PRELIGHT]    = shade (0.84, @theme_color)
