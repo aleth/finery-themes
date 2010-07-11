@@ -268,8 +268,6 @@ style "panel" = "selected"
     xthickness = 0
     ythickness = 0
 
-    bg_pixmap[NORMAL] = "panel_bg.png"
-
     bg[ACTIVE]      = shade (0.7, @selected_bg_color)    
     bg[PRELIGHT]    = shade (0.8, @selected_bg_color)
         
@@ -488,11 +486,6 @@ style "menubar" = "default"
     bg[NORMAL] = "#d2cbbb" #"#cfcfcf" #"#e0d6ba"
 }
 
-style "soundfix"
-{
-    bg[NORMAL] = "#F7F5F2"
-}
-
 style "frame"
 {
 }
@@ -541,8 +534,10 @@ style "radiocheck"
 # Matches
 #########################################
 
-widget "ido-offscreen-scale" style "soundfix"
+widget "*IdoScaleMenuItem*" style "scale"
 widget "*IdoEntryMenuItem*" style "wide"
+
+widget "*Banshee*Notification*SeekSlider*" style "scale"
 
 # default style is applied to every widget
 class "GtkWidget"    style "default"
