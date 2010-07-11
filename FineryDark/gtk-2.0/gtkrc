@@ -53,9 +53,9 @@ style "default"
     GtkTreeView::expander-size = 13
     GtkTreeView::indent-expanders = 1
     GtkTreeView::vertical-separator = 0
-    #GtkProgressBar ::min-vertical-bar-width = 14
+    GtkProgressBar ::min-vertical-bar-width = 18
     #GtkProgressBar ::min-horizontal-bar-width = 14
-    #GtkProgressBar ::min-horizontal-bar-height = 14
+    GtkProgressBar ::min-horizontal-bar-height = 18
     #GtkProgressBar ::min-vertical-bar-height = 12
 
     GtkMenu::horizontal-padding = 1
