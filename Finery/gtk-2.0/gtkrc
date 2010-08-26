@@ -190,8 +190,12 @@ style "entry"
 
     engine "murrine"
     {
-        border_shades   = {1.22, 0.88 }
-        contrast        = .6
+# settings from radiance
+		border_shades = {1.0, 1.0 }
+		contrast = .8
+
+#        border_shades   = {1.22, 0.88 }
+#        contrast        = .6
         
         lightborderstyle    = 1     # 0 = lightborder on top side, 1 = lightborder on all sides
         lightborder_shade   = 2.0
