@@ -103,8 +103,7 @@
     </gradient>
     
     <!-- Topmost bright line -->
-<!--    <line color="shade/gtk:bg[NORMAL]/0.3" x1="0" x2="width" y1="0" y2="0"/> -->
-    <line color="shade/gtk:bg[NORMAL]/0.4" x1="0" x2="width" y1="0" y2="0"/>
+    <line color="shade/gtk:bg[NORMAL]/0.3" x1="0" x2="width" y1="0" y2="0"/>
     
     <!-- Brightening of the left arch -->
     <line color="shade/gtk:bg[NORMAL]/0.18" x1="0" x2="4" y1="1" y2="1"/>
@@ -121,11 +120,9 @@
     
     <!-- Top highlight -->
     <!-- This uses <tint> (which supports alpha) instead of <line> (which doesn't) -->
-    <tint color="#63635e" alpha="0.55" x="5" y="1" width="width - 10" height="1"/>  
-    <tint color="#63635e" alpha="0.15" x="5" y="2" width="width - 10" height="1"/> 
-<!--    <tint color="#ffffff" alpha="0.05" x="5" y="1" width="width - 10" height="1"/> -->
-<!--    <tint color="#ffffff" alpha="0.02" x="5" y="2" width="width - 10" height="1"/> -->
-<!--    <tint color="#ffffff" alpha="0.2" x="0" y="1" width="width" height="1"/>  (strange x value) -->
+    <tint color="#ffffff" alpha="0.05" x="5" y="1" width="width - 10" height="1"/>
+    <tint color="#ffffff" alpha="0.02" x="5" y="2" width="width - 10" height="1"/>
+    <tint color="#ffffff" alpha="0.2" x="0" y="1" width="width" height="1"/>
 </draw_ops>
 
 
@@ -139,8 +136,7 @@
     </gradient>
     
     <!-- Topmost bright line -->
-<!--    <line color="shade/gtk:bg[NORMAL]/0.3" x1="0" x2="width" y1="0" y2="0"/> -->
-    <line color="shade/gtk:bg[NORMAL]/0.4" x1="0" x2="width" y1="0" y2="0"/>
+    <line color="shade/gtk:bg[NORMAL]/0.3" x1="0" x2="width" y1="0" y2="0"/>
     
     <!-- Brightening of the left arch -->
     <line color="shade/gtk:bg[NORMAL]/0.18" x1="0" x2="4" y1="1" y2="1"/>
@@ -157,11 +153,9 @@
     
     <!-- Top highlight -->
     <!-- This uses <tint> (which supports alpha) instead of <line> (which doesn't) -->
-    <tint color="#595954" alpha="0.55" x="5" y="1" width="width - 10" height="1"/> 
-    <tint color="#595954" alpha="0.15" x="5" y="2" width="width - 10" height="1"/> 
-    <!-- <tint color="#ffffff" alpha="0.05" x="5" y="1" width="width - 10" height="1"/> -->
-    <!-- <tint color="#ffffff" alpha="0.02" x="5" y="2" width="width - 10" height="1"/> -->
-    <!-- <tint color="#ffffff" alpha="0.2" x="0" y="1" width="width" height="1"/> -->
+    <tint color="#ffffff" alpha="0.05" x="5" y="1" width="width - 10" height="1"/>
+    <tint color="#ffffff" alpha="0.02" x="5" y="2" width="width - 10" height="1"/>
+    <tint color="#ffffff" alpha="0.2" x="0" y="1" width="width" height="1"/>
 </draw_ops>
 
 
@@ -175,16 +169,13 @@
     </gradient>
     
     <!-- Topmost bright line -->
-<!--    <line color="shade/gtk:bg[NORMAL]/0.3" x1="0" x2="width" y1="0" y2="0"/> -->
-    <line color="shade/gtk:bg[NORMAL]/0.4" x1="0" x2="width" y1="0" y2="0"/>
+    <line color="shade/gtk:bg[NORMAL]/0.3" x1="0" x2="width" y1="0" y2="0"/>
 
     <!-- Top highlight -->
     <!-- This uses <tint> (which supports alpha) instead of <line> (which doesn't) -->
-    <tint color="#595954" alpha="0.55" x="0" y="1" width="width" height="1"/> 
-    <tint color="#595954" alpha="0.15" x="0" y="2" width="width" height="1"/> 
-    <!-- <tint color="#ffffff" alpha="0.05" x="5" y="1" width="width - 10" height="1"/> -->
-    <!-- <tint color="#ffffff" alpha="0.02" x="5" y="2" width="width - 10" height="1"/> -->
-    <!-- <tint color="#ffffff" alpha="0.2" x="0" y="1" width="width" height="1"/> -->
+    <tint color="#ffffff" alpha="0.05" x="5" y="1" width="width - 10" height="1"/>
+    <tint color="#ffffff" alpha="0.02" x="5" y="2" width="width - 10" height="1"/>
+    <tint color="#ffffff" alpha="0.2" x="0" y="1" width="width" height="1"/>
 </draw_ops>
 
 
