@@ -6,9 +6,10 @@
 
 style "theme-panel" = "murrine-selected-item"
 {
-	xthickness = 3
-#	ythickness = 0
-	bg_pixmap[NORMAL] 	= "panel_bg.png"     # panel bg from Ambiance
+	xthickness = 3					# wider spacing for panel items
+	ythickness = 0					# leaving this out adds bottom border to panel
+									# also seems to cause display update errors on light->dark theme change
+	bg_pixmap[NORMAL] 	= "panel_bg.png"     	# panel bg from Ambiance
 
 	bg[NORMAL]      	= @fg_color
 	bg[PRELIGHT]    	= shade (.65, @selected_bg_color)
