@@ -14,7 +14,7 @@ gtk_color_scheme = "fg_color:#3c3b37\nbg_color:#f1ece3\nbase_color:#ffffff\ntext
 
 gtk-icon-sizes = "panel-menu=22,22:gtk-button=16,16"
 
-gtk-auto-mnemonics = 1 
+gtk-auto-mnemonics = 1
 
 style "default"
 {
@@ -101,7 +101,6 @@ style "default"
     base[SELECTED]    = @selected_bg_color
     base[INSENSITIVE] = @bg_color
 
-
     text[NORMAL]      = @text_color
     text[PRELIGHT]    = @text_color
     text[ACTIVE]      = @selected_fg_color
@@ -161,19 +160,20 @@ style "default"
 
 include "panel.rc"
 
+
 style "dark" = "default"
 {
 	fg[NORMAL]      	= "#dfd8c8"
-	fg[PRELIGHT]   	= "#fff"
+	fg[PRELIGHT]   		= "#fff"
 	fg[ACTIVE]      	= "#fff"
 	fg[SELECTED]    	= @text_color
 	fg[INSENSITIVE] 	= "#99958b"
 
-	bg[NORMAL]		    = @fg_color
+	bg[NORMAL]		= @fg_color
 	bg[PRELIGHT]    	= shade (.65, @theme_color)
-	bg[ACTIVE]		    = shade(.55, @selected_bg_color)
+	bg[ACTIVE]		= shade(.55, @selected_bg_color)
 	bg[SELECTED]    	= mix(0.49, shade(0.7, @theme_color), shade(0.72, @bg_color))
-	bg[INSENSITIVE]	= @fg_color
+	bg[INSENSITIVE]		= @fg_color
 
 	base[NORMAL]		= @base_color
 	base[PRELIGHT]		= shade (0.95, @bg_color)
@@ -190,11 +190,11 @@ style "dark" = "default"
 
 style "selected" = "default"
 {
-    bg[NORMAL]      = shade (0.75, @bg_color)
-    bg[PRELIGHT]    = shade (0.7, @theme_color)
-    bg[SELECTED]    = shade (0.85, @bg_color)
-    bg[ACTIVE]      = shade (0.75, @bg_color)
-    bg[INSENSITIVE] = mix (0.35, @selected_bg_color, @bg_color)
+    	bg[NORMAL]      = shade (0.75, @bg_color)
+    	bg[PRELIGHT]    = shade (0.7, @theme_color)
+    	bg[SELECTED]    = shade (0.85, @bg_color)
+    	bg[ACTIVE]      = shade (0.75, @bg_color)
+    	bg[INSENSITIVE] = mix (0.35, @selected_bg_color, @bg_color)
 }
 
 style "wide"
@@ -346,7 +346,7 @@ style "separator-menu-item"
     xthickness = 4
     ythickness = 0
 
-	bg[NORMAL] = shade(0.6, @selected_bg_color)        # modified from 0.8 (darker separators)
+    bg[NORMAL] = shade(0.6, @selected_bg_color)        # modified from 0.8 (for darker separators)
 }
 style "treeview"
 {
@@ -534,42 +534,42 @@ class "GtkFrame"                         style "wide"
 class "GtkSeparator"                     style "wide"
 class "GtkEntry"                         style "entry"
 
-class "GtkSpinButton"                      style "spinbutton"
-class "GtkScale"                           style "scale"
-class "GtkVScale"                          style "vscale"
-class "GtkHScale"                          style "hscale"
-class "GtkScrollbar"                       style "scrollbar"
-class "GtkVScrollbar"                      style "vscrollbar"
-class "GtkHScrollbar"                      style "hscrollbar"
+class "GtkSpinButton"                    style "spinbutton"
+class "GtkScale"                         style "scale"
+class "GtkVScale"                        style "vscale"
+class "GtkHScale"                        style "hscale"
+class "GtkScrollbar"                     style "scrollbar"
+class "GtkVScrollbar"                    style "vscrollbar"
+class "GtkHScrollbar"                    style "hscrollbar"
 
-class "GtkRadioButton"                    style:highest "radiocheck"    
-class "GtkCheckButton"                    style:highest "radiocheck"    
+class "GtkRadioButton"                   style:highest "radiocheck"    
+class "GtkCheckButton"                   style:highest "radiocheck"    
 
-widget_class "*<GtkNotebook>*<GtkEventBox>"         style "notebook"
-widget_class "*<GtkNotebook>*<GtkDrawingArea>"        style "notebook"
-widget_class "*<GtkNotebook>*<GtkLayout>"           style "notebook"
-widget_class "*<GtkNotebook>*<GtkViewport>"        style "notebook"
-widget_class "*<GtkNotebook>*<GtkScrolledWindow>"    style "notebook"
+widget_class "*<GtkNotebook>*<GtkEventBox>"        	style "notebook"
+widget_class "*<GtkNotebook>*<GtkDrawingArea>"        	style "notebook"
+widget_class "*<GtkNotebook>*<GtkLayout>"           	style "notebook"
+widget_class "*<GtkNotebook>*<GtkViewport>"        	style "notebook"
+widget_class "*<GtkNotebook>*<GtkScrolledWindow>"    	style "notebook"
 
 widget_class "*<GtkButton>"                  style "button"
 widget_class "*<GtkNotebook>"                style "notebook"
 widget_class "*<GtkStatusbar>*"              style "statusbar"
 
-widget_class "*<GtkComboBoxEntry>*"            style:highest "comboboxentry"
-widget_class "*<GtkComboBox>*"                     style:highest "comboboxentry"
-widget_class "*<GtkOptionMenu>*"                 style:highest "comboboxentry"
-widget_class "*<GtkCombo>*"                     style:highest "comboboxentry"
+widget_class "*<GtkComboBoxEntry>*"          style:highest "comboboxentry"
+widget_class "*<GtkComboBox>*"               style:highest "comboboxentry"
+widget_class "*<GtkOptionMenu>*"             style:highest "comboboxentry"
+widget_class "*<GtkCombo>*"                  style:highest "comboboxentry"
 
-widget_class "*<GtkMenuBar>*"                   style "menubar"
-widget_class "*<GtkMenu>*"                      style "menu"
-widget_class "*<GtkMenuItem>*"                  style "menu-item"
-widget_class "*<GtkSeparatorMenuItem>*"         style "separator-menu-item"
+widget_class "*<GtkMenuBar>*"                style "menubar"
+widget_class "*<GtkMenu>*"                   style "menu"
+widget_class "*<GtkMenuItem>*"               style "menu-item"
+widget_class "*<GtkSeparatorMenuItem>*"      style "separator-menu-item"
 
-widget_class "*.<GtkFrame>.<GtkLabel>"             style "frame-title"
-widget_class "*.<GtkTreeView>*"                    style "treeview"
+widget_class "*.<GtkFrame>.<GtkLabel>"       style "frame-title"
+widget_class "*.<GtkTreeView>*"              style "treeview"
 
 widget_class "*<GtkProgress>"                style "progressbar"
-widget_class "*<GtkProgressBar>"                   style "progressbar"
+widget_class "*<GtkProgressBar>"             style "progressbar"
 
 # Treeview header
 widget_class "*.<GtkTreeView>.<GtkButton>"         style "treeview-header"
@@ -578,8 +578,8 @@ widget_class "*.<GtkList>.<GtkButton>"             style "treeview-header"
 widget_class "*.<GtkCList>.<GtkButton>"            style "treeview-header"
 
 # Workarounds for Evolution
-widget_class "*.ETable.ECanvas"                style "treeview-header"
-widget_class "*.ETree.ECanvas"                style "treeview-header"
+widget_class "*.ETable.ECanvas"              style "treeview-header"
+widget_class "*.ETree.ECanvas"               style "treeview-header"
 
 # The window of the tooltip is called "gtk-tooltip"
 ################################
@@ -597,7 +597,7 @@ widget "gtk-tooltip*"                     style "tooltips"
 
 # Special case the nautilus-extra-view-widget
 # ToDo: A more generic approach for all applications that have a widget like this.
-widget "*.nautilus-extra-view-widget"             style : highest "nautilus-location"
+widget "*.nautilus-extra-view-widget"           style : highest "nautilus-location"
 
 # Nautilus sidebar
 widget_class "*Nautilus*Places*Sidebar*"        style "nautilus-sidebar"

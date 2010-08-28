@@ -6,25 +6,26 @@
 
 style "theme-panel" = "murrine-selected-item"
 {
-    xthickness = 3
-	#bg_pixmap[NORMAL]	= "/Panels/bg_panel_26.png" # Disable for normal panel backgrounds.
+	xthickness = 3
+#	ythickness = 0
+	bg_pixmap[NORMAL] 	= "panel_bg.png"     # panel bg from Ambiance
 
-	bg[NORMAL]      = @fg_color
-	bg[PRELIGHT]    = shade (.65, @selected_bg_color)
-	bg[ACTIVE]      = shade(.55, @selected_bg_color)
+	bg[NORMAL]      	= @fg_color
+	bg[PRELIGHT]    	= shade (.65, @selected_bg_color)
+	bg[ACTIVE]      	= shade(.55, @selected_bg_color)
 	bg[SELECTED]    	= mix(0.49, shade(0.7, @theme_color), shade(0.72, @bg_color))
-	bg[INSENSITIVE] = @fg_color
+	bg[INSENSITIVE] 	= @fg_color
 	
 	fg[NORMAL]      	= "#dfd8c8" # Makes panel text light.
-	fg[PRELIGHT]   	= "#fff" #"#48453e"
+	fg[PRELIGHT]   		= "#fff" #"#48453e"
 	fg[SELECTED]    	= @selected_fg_color #"#333333"
 	fg[ACTIVE]      	= "#fff"
 	fg[INSENSITIVE] 	= "#99958b"
 	
-	text[NORMAL]	    = "#e6e6e6"
-	text[PRELIGHT]	    = "#333333" # Makes prelighted text colored.
-	text[SELECTED]	    = "#333333" # Makes prelighted text colored.
-	text[ACTIVE]	    = @selected_fg_color # Makes active text colored.
+	text[NORMAL]	    	= "#e6e6e6"
+	text[PRELIGHT]	    	= "#333333" # Makes prelighted text colored.
+	text[SELECTED]	    	= "#333333" # Makes prelighted text colored.
+	text[ACTIVE]	    	= @selected_fg_color # Makes active text colored.
 	text[INSENSITIVE]	= "#48453e"
 	
     engine "murrine" 
@@ -35,27 +36,28 @@ style "theme-panel" = "murrine-selected-item"
         border_shades       = { 1.32, 1.12 }
         gradient_shades     = {0.96, 0.75, 0.96, 0.75}
 		
-		glazestyle          = 3     # 0 = flat, 1 = curved, 2 = concave, 3 = top-curved, 4 = beryl
-		glow_shade          = 1.4   # sets glow amount for buttons or widgets
-		glowstyle           = 4
-		
-		highlight_shade     = 1.05  # set highlight amount for buttons or widgets
-		
-		lightborder_shade   = 1.6   # sets lightborder amount for buttons or widgets
-		lightborderstyle    = 1     # 0 = lightborder on top side, 1 = lightborder on all sides
-		
-		shadow_shades 	    = { 0.3, 0.1 } # draw gradient on shadow of some widgets
-		textstyle           = 1     # 0 = normal text, 1 = inset
+	glazestyle          = 3     # 0 = flat, 1 = curved, 2 = concave, 3 = top-curved, 4 = beryl
+	glow_shade          = 1.4   # sets glow amount for buttons or widgets
+	glowstyle           = 4
+	
+	highlight_shade     = 1.05  # set highlight amount for buttons or widgets
+	
+	lightborder_shade   = 1.6   # sets lightborder amount for buttons or widgets
+	lightborderstyle    = 1     # 0 = lightborder on top side, 1 = lightborder on all sides
+	
+	shadow_shades 	    = { 0.3, 0.1 } # draw gradient on shadow of some widgets
+	textstyle           = 1     # 0 = normal text, 1 = inset
     }
 }
 
 # For the window list, clock applet etc.
 style "theme-panel-buttons" = "theme-panel"
 {
-	bg[PRELIGHT]	= shade (1.4, @fg_color) # Makes panel button prelight dark.
-	bg[ACTIVE]	    =  shade (0.38, @theme_color) # Makes active buttons dark.
-	bg[INSENSITIVE]	= "#464139"
-	
+	bg[PRELIGHT]		= shade (1.4, @fg_color) # Makes panel button prelight dark.
+	bg[ACTIVE]	    	= shade (0.38, @theme_color) # Makes active buttons dark.
+	bg[INSENSITIVE]		= "#464139"
+
+	bg_pixmap[NORMAL] 	= "panel_bg.png"     # panel bg from Ambiance	
 	
 	engine "murrine" {
 		roundness           = 2 # This sets the roundness of panel items.
@@ -72,7 +74,7 @@ style "theme-panel-buttons" = "theme-panel"
 
 style "theme-panel-light"
 {
-    fg[NORMAL]  = @fg_color
+    	fg[NORMAL]  		= @fg_color
 }
 
 # Panel settings
