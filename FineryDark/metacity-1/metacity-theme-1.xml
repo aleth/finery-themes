@@ -102,9 +102,9 @@
         <color value="#3d3c37" />
     </gradient>
     
-    <!-- Topmost bright line -->
+    <!-- Topmost dark line -->
 <!--    <line color="shade/gtk:bg[NORMAL]/0.3" x1="0" x2="width" y1="0" y2="0"/> -->
-    <line color="shade/gtk:bg[NORMAL]/0.4" x1="0" x2="width" y1="0" y2="0"/>
+    <line color="shade/gtk:bg[NORMAL]/0.32" x1="0" x2="width" y1="0" y2="0"/>
     
     <!-- Brightening of the left arch -->
     <line color="shade/gtk:bg[NORMAL]/0.18" x1="0" x2="4" y1="1" y2="1"/>
@@ -138,9 +138,9 @@
         <color value="#3c3b37" />
     </gradient>
     
-    <!-- Topmost bright line -->
+    <!-- Topmost dark line -->
 <!--    <line color="shade/gtk:bg[NORMAL]/0.3" x1="0" x2="width" y1="0" y2="0"/> -->
-    <line color="shade/gtk:bg[NORMAL]/0.4" x1="0" x2="width" y1="0" y2="0"/>
+    <line color="shade/gtk:bg[NORMAL]/0.3" x1="0" x2="width" y1="0" y2="0"/>
     
     <!-- Brightening of the left arch -->
     <line color="shade/gtk:bg[NORMAL]/0.18" x1="0" x2="4" y1="1" y2="1"/>
@@ -176,7 +176,7 @@
     
     <!-- Topmost bright line -->
 <!--    <line color="shade/gtk:bg[NORMAL]/0.3" x1="0" x2="width" y1="0" y2="0"/> -->
-    <line color="shade/gtk:bg[NORMAL]/0.4" x1="0" x2="width" y1="0" y2="0"/>
+    <line color="shade/gtk:bg[NORMAL]/0.3" x1="0" x2="width" y1="0" y2="0"/>
 
     <!-- Top highlight -->
     <!-- This uses <tint> (which supports alpha) instead of <line> (which doesn't) -->
