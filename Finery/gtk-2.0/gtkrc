@@ -223,7 +223,7 @@ style "button" = "selected"
         lightborderstyle    = 1     # 0 = lightborder on top side, 1 = lightborder on all sides
         lightborder_shade   = 2.0
 
-        glow_shade          = 1.58
+        glow_shade          = 1.0 # 1.58 -- button "gloss"
         glowstyle           = 3
         glazestyle          = 4
         gradient_shades     = {1.4,1.2,1.2,1.1}
@@ -380,7 +380,7 @@ style "progressbar"
         border_colors       = { "#FE765E", "#FE765E" }
         
         glazestyle          = 0     # 0 = flat, 1 = curved, 2 = concave, 3 = top-curved, 4 = beryl
-        glow_shade          = 1.5   # sets glow amount for buttons or widgets
+        glow_shade          = 1.15 # 1.5   # sets glow amount for buttons or widgets
         glowstyle           = 2     # 0 = top, 1 = bottom, 2 = top and bottom, 3 = center (vertical), 4 = center (horizontal) 
         gradient_shades     = {1.1,.9,.9,.8}
         lightborder_shade   = 1.6   # sets lightborder amount for buttons or widgets
