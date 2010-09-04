@@ -1,0 +1,39 @@
+Wine colour scheme for Ambiance/Finery/FineryDark
+
+Insert the following in ~/.wine/user.reg :
+
+
+[Control Panel\\Colors] 1277511412
+"ActiveBorder"="228 220 208"
+"ActiveTitle"="147 131 108"
+"AppWorkSpace"="255 255 255"
+"Background"="253 221 110"
+"ButtonAlternateFace"="228 220 208"
+"ButtonAlternativeFace"="200 0 0"
+"ButtonDkShadow"="175 152 131"
+"ButtonFace"="240 235 226"
+"ButtonHilight"="255 255 255"
+"ButtonLight"="240 235 226"
+"ButtonShadow"="208 200 188"
+"ButtonText"="60 59 55"
+"GradientActiveTitle"="242 238 232"
+"GradientInactiveTitle"="255 255 255"
+"GrayText"="184 169 143"
+"Hilight"="198 185 166"
+"HilightText"="50 50 50"
+"HotTrackingColor"="255 255 255"
+"InactiveBorder"="228 220 208"
+"InactiveTitle"="184 169 143"
+"InactiveTitleText"="255 255 255"
+"InfoText"="255 255 255"
+"InfoWindow"="0 0 0"
+"Menu"="240 235 226"
+"MenuBar"="240 235 226"
+"MenuHilight"="228 220 208"
+"MenuText"="0 0 0"
+"Scrollbar"="204 192 169"
+"TitleText"="255 255 255"
+"Window"="255 255 255"
+"WindowFrame"="195 185 170"
+"WindowText"="58 57 53"
+
