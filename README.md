@@ -1,4 +1,4 @@
-Slightly tweaked Finery and FineryDark themes
+#Slightly tweaked Finery and FineryDark themes
 =============================================
 
 A matching colour scheme for Wine can be found in wine-colours.reg
@@ -18,8 +18,8 @@ FineryDark
 
 * Darker menu separators
 * Remove 3D effect from entry boxes (as in Ambiance)
-* Softer shaded top of titlebars: remove 'grey line' from titlebar 
-* Panel background from Ambiance theme
+* Softer shaded top of titlebars: remove 'grey line' 
 * Brighter default hover colour
 * Paler selection colour
+* Panel background from Ambiance theme
 * Reduce glow_shade on buttons and progress bars
