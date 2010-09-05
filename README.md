@@ -1,4 +1,4 @@
-#Slightly tweaked Finery and FineryDark themes
+Slightly tweaked Finery and FineryDark themes
 =============================================
 
 A matching colour scheme for Wine can be found in wine-colours.reg
