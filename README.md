@@ -10,7 +10,8 @@ Finery
 * Removed "drop shadows" from window list text (text inset off)
 * Remove 3D effect from entry boxes (as in original Radiance theme)
 * Paler selection colour
-* Reduce glow_shade on buttons and progress bars
+* Smoother, less glossy buttons
+* Reduce glow_shade on progress bars
 
 
 FineryDark
@@ -22,4 +23,6 @@ FineryDark
 * Brighter default hover colour
 * Paler selection colour
 * Panel background from Ambiance theme
-* Reduce glow_shade on buttons and progress bars
+* Smoother, less glossy buttons
+* Reduce glow_shade on progress bars
+
