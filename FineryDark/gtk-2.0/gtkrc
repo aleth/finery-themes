@@ -173,7 +173,7 @@ style "dark" = "default"
 	bg[NORMAL]			= @fg_color							
 	bg[PRELIGHT]    	= shade(.65, @theme_color)    		
 	bg[ACTIVE]			= shade(.55, @selected_bg_color)	
-	bg[SELECTED]    	= mix(0.49, shade(0.7, @theme_color), shade(0.72, @bg_color))
+	bg[SELECTED]    	= mix(0.49, shade(0.7, @theme_color), shade(0.72, @bg_color))  #@colored_color is mavericky
 	bg[INSENSITIVE]		= @fg_color
 
 	base[NORMAL]		= @base_color
@@ -195,7 +195,7 @@ style "selected" = "default"
     	bg[PRELIGHT]    = shade (0.7, @theme_color)
     	bg[SELECTED]    = shade (0.88, @bg_color) #85
     	bg[ACTIVE]      = shade (0.78, @bg_color) #75
-    	bg[INSENSITIVE] = mix (0.35, @selected_bg_color, @bg_color) #35
+    	bg[INSENSITIVE] = mix (0.35, @selected_bg_color, @bg_color) 
 }
 
 style "wide"
@@ -235,7 +235,7 @@ style "entry"
 
 style "button" = "selected"
 {
-    GtkButton::focus-line-width = 0
+    #GtkButton::focus-line-width = 0
 
     xthickness = 4
     ythickness = 4
@@ -253,7 +253,7 @@ style "button" = "selected"
         lightborderstyle    = 1     # 0 = lightborder on top side, 1 = lightborder on all sides
         lightborder_shade   = 2.0
 
-        glow_shade          = 1.0 #1.58 -- button "gloss". 1.0 is off, 1.3 is not bad
+        glow_shade          = 1.0 #1.58 -- button "gloss"
         glowstyle           = 3
         glazestyle          = 4
         gradient_shades     = {1.3,1.2,1.2,1.1} #{1.4,1.2,1.2,1.1}
@@ -301,9 +301,8 @@ style "menu" = "dark"
 {
     xthickness = 0
     ythickness = 0
-
     
-    bg[INSENSITIVE] = mix (0.4, @selected_bg_color, @bg_color)
+#    bg[INSENSITIVE] = mix (0.4, @selected_bg_color, @bg_color)			# removing this fixes scrolling arrow bg error
 
     engine "murrine" 
     {
@@ -425,7 +424,8 @@ style "comboboxentry"
     }
 }
 
-style "combobox" = "dark" {
+style "combobox" = "dark" 
+{
 }
 
 style "spinbutton" 
