@@ -91,7 +91,7 @@ style "default"
     fg[INSENSITIVE]   = darker (@bg_color)
     
     bg[NORMAL]        = @bg_color
-    bg[PRELIGHT]      = shade (0.95, @bg_color) 		# original: shade (.65, @selected_bg_color)
+    bg[PRELIGHT]      = shade (1.04, @bg_color) 		# original: shade (.65, @selected_bg_color) #.95
     bg[ACTIVE]        = shade (0.84, @bg_color)
     bg[SELECTED]      = @selected_bg_color
     bg[INSENSITIVE]   = @bg_color
