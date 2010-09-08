@@ -62,7 +62,7 @@ style "theme-panel-buttons" = "theme-panel"
 #	bg[NORMAL]		= shade(1.3, "#d4cebf") # CANNOT change bg_normal as it affects parts of top panel too
 	bg[SELECTED]	= shade(1.0, @bg_color) # Makes selected items dark.
 	bg[PRELIGHT]	= shade (1.18, @theme_color) # Makes panel button prelight dark. -- finerydark 1.4 orig 1.18
-	bg[ACTIVE]	    =  shade (0.72, @theme_color) # Makes active buttons dark. -- finerydark 0.38 orig 0.67
+	bg[ACTIVE]	    =  shade (0.67, @theme_color) # Makes active buttons dark. -- finerydark 0.38 orig 0.67
 	bg[INSENSITIVE]	= "#464139"
 	
 	engine "murrine" {
