@@ -3,6 +3,10 @@ Slightly tweaked Finery and FineryDark themes
 
 A matching colour scheme for Wine can be found in wine-colours.reg
 
+Requires Equinox GTK engine 
+(http://gnome-look.org/content/show.php/Equinox+GTK+Engine?content=121881)
+
+
 Finery
 ------
 
