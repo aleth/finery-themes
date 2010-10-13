@@ -1,14 +1,15 @@
-Slightly tweaked Finery and FineryDark themes
-=============================================
+Affinery/AffineryDark
+=====================
+
+Slightly tweaked Finery and FineryDark themes, renamed to allow simultaneous installation with the original themes.
+
+Requires Equinox GTK engine (http://gnome-look.org/content/show.php/Equinox+GTK+Engine?content=121881)
 
 A matching colour scheme for Wine can be found in wine-colours.reg
 
-Requires Equinox GTK engine 
-(http://gnome-look.org/content/show.php/Equinox+GTK+Engine?content=121881)
 
-
-Finery
-------
+Affinery
+--------
 
 * Smoother, less glossy buttons
 * Darker window list in the panel, with more even shading
@@ -18,8 +19,8 @@ Finery
 * Reduce glow_shade on progress bars
 
 
-FineryDark
-----------
+AffineryDark
+------------
 
 * Smoother, less glossy buttons
 * Changed menu separators
@@ -29,4 +30,4 @@ FineryDark
 * Paler selection colour
 * Panel background from Ambiance theme
 * Reduce glow_shade on progress bars
-
+* Less window frame contrast

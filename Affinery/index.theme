@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Finery
-Comment=Improved Ubuntu Radiance theme
+Name=Affinery
+Comment=Slightly tweaked Finery theme
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Finery
-MetacityTheme=Finery
+GtkTheme=Affinery
+MetacityTheme=Affinery
 IconTheme=ubuntu-mono-light
 CursorTheme=DMZ-White
 ButtonLayout=close,minimize,maximize:
