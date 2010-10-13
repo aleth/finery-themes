@@ -1,7 +1,7 @@
-Affinery/AffineryDark
-=====================
+Affinery/AffineryDark themes
+============================
 
-Slightly tweaked Finery and FineryDark themes, renamed to allow simultaneous installation with the original themes.
+### Slightly tweaked Finery and FineryDark themes, renamed to allow simultaneous installation with the original themes.
 
 Requires Equinox GTK engine (http://gnome-look.org/content/show.php/Equinox+GTK+Engine?content=121881)
 
